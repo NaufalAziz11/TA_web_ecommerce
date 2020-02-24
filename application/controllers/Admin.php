@@ -9,6 +9,8 @@ class Admin extends CI_Controller
 
 
         $data['judul'] = 'Halaman Admin';
+        $this->load->view('templates/header_admin', $data);
         $this->load->view('admin/index', $data);
+        $this->load->view('templates/footer_admin', $data);
     }
 }

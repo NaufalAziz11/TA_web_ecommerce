@@ -26,8 +26,10 @@ class Login extends CI_Controller
     {
         $email = $this->input->post('email');
         $password = $this->input->post('password');
-
         $user = $this->db->get_where('tb_user', ['email' => $email])->row_array();
+        // $user['tb_user'] = $this->db->Login_model->getUserById($email);
+        // $data['mahasiswa'] = $this->Mahasiswa_model->getMahasiswaById($id);
+
         //jika user ada
         if ($user) {
             //jika user aktif
@@ -36,10 +38,14 @@ class Login extends CI_Controller
                 if (password_verify($password, $user['password'])) {
                     $data = [
                         'email' => $user['email'],
-                        'role_id' => $user['role_id']
+                        'level' => $user['level']
                     ];
                     $this->session->set_userdata($data);
-                    redirect('home');
+                    if ($user['level'] == 1) {
+                        redirect('admin');
+                    } else {
+                        redirect('user');
+                    }
                 } else {
                     $this->session->set_flashdata('message', '<div class = "alert alert-danger" role="alert">Password Salah </div>');
                     redirect('login');
@@ -107,6 +113,6 @@ class Login extends CI_Controller
         $this->session->unset_userdata('email');
         $this->session->unset_userdata('role_id');
 
-        redirect('home');
+        redirect('user');
     }
 }

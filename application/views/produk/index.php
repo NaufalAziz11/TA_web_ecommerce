@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row justify-content-center mb-3 pb-3 ">
             <div class="col-md-12 heading-section text-left ftco-animate mt-5">
-                <a href="<?= base_url(); ?>home" style="color : green; text-decoration:none">Beranda > Kategori ></a>
+                <a href="<?= base_url(); ?>user" style="color : green; text-decoration:none">Beranda > Kategori ></a>
                 <a href="<?= base_url(); ?>kategori/peralatan" style="color : black; text-decoration:none">Peralatan </a>
                 <hr>
             </div>
@@ -88,9 +88,7 @@
 
             <div class="row ml-4 position-sticky">
                 <a href="#1">Deskripsi</a>
-                <a href="#deskripsi" class="ml-4">Ulasan</a>
-                <a href="#ulasan" class="ml-4">Diskusi</a>
-                <a href="#diskusi" class="ml-4">Rekomendasi</a>
+                <a href="#deskripsi" class="ml-4">Rekomendasi</a>
             </div>
             <hr>
         </div>
@@ -102,57 +100,6 @@
                 sit amet fermentum. Donec sed odio operae, eu vulputate felis rhoncus. Praeterea iter est
                 quasdam res quas ex communi. At nos hinc posthac, sitientis piros Afros. Petierunt uti sibi
                 concilium totius Galliae in diem certam indicere. Cras mattis iudicium purus sit amet fermentum.</p>
-        </div>
-        <hr>
-        <div class="row ml-2 ftco-animate">
-            <a name="ulasan"><b>Ulasan</b>
-                <p class="text-justify">
-                    Paprika/kg
-                </p>
-                <div class="row ">
-                    <div class="col-md-2 col-lg-3 ftco-animate ">
-                        <h1 class="text-secondary">4.8 &nbsp; </h1>
-                    </div>
-                    <div class="col-md-2 col-lg-2 ml-3 mt-4 ftco-animate ">
-                        <h6 class="text-secondary">/5</h6>
-                    </div>
-
-                </div>
-            </a>
-        </div>
-        <hr>
-        <div class="row ml-2 ftco-animate" name="diskusi">
-            <a name="diskusi"><b>Diskusi</b></a>
-        </div>
-        <br>
-        <div class="row">
-            <div class="col-2">
-                <a class="ftco-animate">
-                    <img class="img-profile rounded-circle mr-2" style="max-height: 50px" src="<?= base_url('assets/images/profile/') . $user['image']; ?>">
-                    <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?= $user['nama']; ?></span>
-                </a>
-            </div>
-            <div class="col-3">
-                <a class="ftco-animate ml-5">
-                    <h6>mantab mantab</h6>
-                    <textarea style="width : 500px"></textarea>
-                </a>
-            </div>
-        </div>
-        <hr>
-        <div class="row">
-            <div class="col-2">
-                <a class="ftco-animate">
-                    <img class="img-profile rounded-circle mr-2" style="max-height: 50px" src="<?= base_url('assets/images/profile/') . $user['image']; ?>">
-                    <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?= $user['nama']; ?></span>
-                </a>
-            </div>
-            <div class="col-3">
-                <a class="ftco-animate ml-5">
-                    <h6>mantab mantab</h6>
-                    <textarea style="width : 500px"></textarea>
-                </a>
-            </div>
         </div>
         <hr>
         <div class="row ml-2 ftco-animate">
@@ -191,6 +138,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="col-md-6 col-lg-3 ftco-animate">
                     <div class="product">
                         <a href="#" class="img-prod"><img class="img-fluid" src="<?= base_url(); ?>assets/images/product-2.jpg" alt="Colorlib Template">
@@ -278,7 +226,7 @@
             </div>
         </div>
     </div>
-    <hr>
+
     </div>
     <div class="fixed-bottom">
         <hr>
@@ -294,10 +242,7 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <form action="<?= base_url(); ?>produk/beli">
-                    <button class="btn btn-outline-success mr-2" style="width:100px">Beli</button>
-                </form>
-                <form action="<?= base_url(); ?>produk/keranjang">
-                    <button class="btn btn-success" style="width:200px">Tambah Keranjang</button>
+                    <button class="btn btn-success ml-5" style="width:200px">Beli</button>
                 </form>
             </div>
     </div>

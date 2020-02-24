@@ -39,10 +39,11 @@
 
 	<!-- Custom styles for this template-->
 	<link href="<?= base_url(); ?>assets/css/sb-admin-2.min.css" rel="stylesheet">
-
 	<link href="<?= base_url(); ?>assets/css/bootstrap.min.css" rel="stylesheet">
-
+	<!--fileupload-->
+	<link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/lib/bootstrap-fileupload/bootstrap-fileupload.css" />
 	<title><?= $judul; ?></title>
+
 </head>
 
 <body>
@@ -63,11 +64,7 @@
 					<div class="text-secondary">Kontak</div>
 				</a>
 			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="#">
-					<div class="text-secondary">Profil</div>
-				</a>
-			</li>
+
 
 		</ul>
 
@@ -98,11 +95,11 @@
 							</a>
 							<!-- Dropdown - User Information -->
 							<div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-								<a class="dropdown-item" href="#">
+								<a class="dropdown-item" href="<?= base_url() ?>user/profile">
 									<i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
 									Profile
 								</a>
-								<div class="dropdown-divider"></div>
+
 								<a class="dropdown-item" href="" data-toggle="modal" data-target="#logoutModal">
 									<i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
 									Logout

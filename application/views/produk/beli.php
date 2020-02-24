@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row justify-content-center mb-3 pb-3 ">
             <div class="col-md-12 heading-section text-left ftco-animate mt-5">
-                <a href="<?= base_url(); ?>home" style="color : green; text-decoration:none">Beranda > Kategori ></a>
+                <a href="<?= base_url(); ?>user" style="color : green; text-decoration:none">Beranda > Kategori ></a>
                 <a href="<?= base_url(); ?>kategori/beli" style="color : black; text-decoration:none">Pengiriman </a>
                 <hr>
             </div>
