@@ -79,7 +79,7 @@
 			</li>
 			<li class="nav-item">
 				<a class="nav-link" href="#">
-					<div class="text-secondary">Kontak</div>
+					<div class="text-secondary">Bantuan</div>
 				</a>
 			</li>
 
@@ -101,10 +101,12 @@
 					<div class="input-group-append">
 						<button class="btn btn-success" type="submit">Cari</button>
 					</div>
-					<a href="<?= base_url(); ?>keranjang" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a>
 
 
 					<?php if ($this->session->userdata('email')) { ?>
+						<a href="<?= base_url(); ?>produk/keranjang" class="mt-2 ml-2"><span class="icon-shopping_cart"></span>[3]</a>
+						<a href="<?= base_url(); ?>produk/invoice" class="mt-2 ml-1"><img src="<?= base_url(); ?>assets/images/icons/icons8-bell-30.png">[1]</a>
+
 						<div class="nav-item dropdown no-arrow ">
 							<a class="nav-link dropdown-toggle mb-2" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 								<span class="mr-2 d-none d-lg-inline text-gray-600 small"><?= $user['nama']; ?></span>
@@ -126,7 +128,7 @@
 						</div>
 					<?php } else { ?>
 						<form action="<?= base_url(); ?>login">
-							<button class="btn btn-outline-success mr-2">Masuk</button>
+							<button class="btn btn-outline-success mr-2 ml-2">Masuk</button>
 						</form>
 						<form action="<?= base_url(); ?>login/daftar">
 							<button class="btn btn-success">Daftar</button>

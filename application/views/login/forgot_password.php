@@ -14,29 +14,23 @@
 							<div class="p-5">
 								<div class="text-center">
 									<h1 class="h4 text-gray-900 mb-4">AnyarTani</h1>
+									<h6 class="h6 text-gray-900 mb-4">Lupa Password ?</h6>
 								</div>
 								<?= $this->session->flashdata('message'); ?>
 
-								<form class="user" method="post" action="<?= base_url() ?>login">
+								<form class="user" method="post" action="<?= base_url() ?>login/forgot_password">
 									<div class="form-group">
 										<input type="text" class="form-control form-control-user" id="email" name="email" placeholder="Enter Email Address..." value="<?= set_value('email'); ?>">
 										<?= form_error('email', '<small class="text-danger pl-3">', '</small>'); ?>
 									</div>
-									<div class="form-group">
-										<input type="password" class="form-control form-control-user" id="password" name="password" placeholder="Password">
-										<?= form_error('password', '<small class="text-danger pl-3">', '</small>'); ?>
-									</div>
 									<button type="submit" class="btn btn-success btn-user btn-block">
-										Masuk
+										Reset Password
 									</button>
 
 								</form>
 								<hr>
 								<div class="text-center">
-									<a class="small" href="<?= base_url(); ?>login/forgot_password">Lupa Password ?</a>
-								</div>
-								<div class="text-center">
-									<a class="small" href="<?= base_url(); ?>login/daftar">Daftar</a>
+									<a class="small" href="<?= base_url(); ?>login">Kembali ke Login</a>
 								</div>
 							</div>
 						</div>

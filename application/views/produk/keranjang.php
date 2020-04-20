@@ -101,7 +101,7 @@
                         <h6 class="text-success ml-5"><b>Rp.330.000</b></h6>
                     </div>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <form action="<?= base_url(); ?>produk/konfirmasi">
+                        <form action="<?= base_url(); ?>produk/beli">
                             <button class="btn btn-success" style="width:200px">Beli(3)</button>
                         </form>
                     </div>

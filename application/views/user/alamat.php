@@ -7,30 +7,8 @@
             </div>
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12 text-center">
-                        <div class="fileupload fileupload-new" data-provides="fileupload">
-                            <div class="fileupload-new thumbnail" style="width: 200px; height: 150px;">
-                                <img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&text=no+image" alt="" />
-                            </div>
-                            <div class="fileupload-preview fileupload-exists thumbnail" style="max-width: 200px; max-height: 150px; line-height: 20px;"></div>
-                            <div>
-                                <span class="btn btn-theme02 btn-file">
-                                    <span class="fileupload-new"><i class="fa fa-paperclip"></i> Ubah Foto</span>
-                                    <span class="fileupload-exists"><i class="fa fa-undo"></i> Ubah Foto</span>
-
-                                </span>
-                                <a href="advanced_form_components.html#" class="btn btn-theme04 fileupload-exists" data-dismiss="fileupload"><i class="fa fa-trash-o"></i> Remove</a>
-                            </div>
-                        </div>
-                    </div>
                     <div class="col-md-3 text-right ">
-                        <div>
-                            <p>Username</p>
-                        </div>
-                        <br>
-                        <div>
-                            <p>Email</p>
-                        </div>
+
                         <br>
                         <div>
                             <p>Nama Kamu</p>
@@ -62,19 +40,14 @@
                     </div>
                     <div class="col-md-6 ">
                         <form>
-
-                            <div class="form-group">
-                                <input type="text" class="form-control text-center bg-light" style="width:100" id="exampleInputEmail1" aria-describedby="emailHelp" readonly>
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control text-center bg-light" style="width:100" id="exampleInputEmail1" aria-describedby="emailHelp" readonly>
-                            </div>
+                            <br>
                             <div class="form-group">
                                 <input type="text" class="form-control text-center" style="width:100" id="exampleInputEmail1" aria-describedby="emailHelp">
                             </div>
                             <div class="form-group">
-                                <input type="email" class="form-control text-center" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                <input type="text" class="form-control text-center" style="width:100" id="exampleInputEmail1" aria-describedby="emailHelp">
                             </div>
+
                             <div class="dropdown">
                                 <button class="btn btn-success btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Jawa Tengah
@@ -105,7 +78,7 @@
                                 </div>
                             </div>
                             <br>
-                            <div class="dropdown">
+                            <div class="dropdown mt-2">
                                 <button class="btn btn-success btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     51161
                                 </button>

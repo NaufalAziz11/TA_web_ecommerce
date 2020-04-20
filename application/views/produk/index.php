@@ -48,36 +48,6 @@
 
                 </div>
 
-                <hr>
-                <div class="row ml-2 ftco-animate">
-                    <div class="col-md-2 col-lg-2 ftco-animate ">
-                        <h6 class="text-secondary">Ongkos Kirim </h6>
-                    </div>
-                    <div class="col-md-1 col-lg-1 ftco-animate ">
-                        <h6 class="text-secondary"> ke </h6>
-
-                    </div>
-                    <div class="dropdown">
-                        <button class="btn btn-success btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Pekalongan,Kajen
-                        </button>
-                        <div class="dropdown-menu" style="width:300px" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">Kecamatan
-                                <div class="dropdown">
-                                    <button class="btn btn-success btn-sm dropdown-toggle text-left" style="max-width:250px" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Pekalongan,Kajen
-                                    </button>
-                                    <div class="dropdown-menu" style="width:300px" aria-labelledby="dropdownMenuButton">
-                                        <a class="dropdown-item" href="#">Kecamatan</a>
-                                    </div>
-                                </div>
-                            </a>
-                            <a class="dropdown-item" href="#">Kode Pos</a>
-
-                        </div>
-                    </div>
-
-                </div>
             </div>
             <a name="1"></a>
         </div>
@@ -118,23 +88,11 @@
                         <div class="text py-3 pb-4 px-3 text-center">
                             <h3><a href="#">Bell Pepper</a></h3>
                             <div class="d-flex">
-                                <div class="pricing">
+                                <div class="text text-center">
                                     <p class="price"><span class="mr-2 price-dc">$120.00</span><span class="price-sale">$80.00</span></p>
                                 </div>
                             </div>
-                            <div class="bottom-area d-flex px-3">
-                                <div class="m-auto d-flex">
-                                    <a href="#" class="add-to-cart d-flex justify-content-center align-items-center text-center">
-                                        <span><i class="ion-ios-menu"></i></span>
-                                    </a>
-                                    <a href="#" class="buy-now d-flex justify-content-center align-items-center mx-1">
-                                        <span><i class="ion-ios-cart"></i></span>
-                                    </a>
-                                    <a href="#" class="heart d-flex justify-content-center align-items-center ">
-                                        <span><i class="ion-ios-heart"></i></span>
-                                    </a>
-                                </div>
-                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -147,23 +105,11 @@
                         <div class="text py-3 pb-4 px-3 text-center">
                             <h3><a href="#">Strawberry</a></h3>
                             <div class="d-flex">
-                                <div class="pricing">
+                                <div class="text text-center">
                                     <p class="price"><span>$120.00</span></p>
                                 </div>
                             </div>
-                            <div class="bottom-area d-flex px-3">
-                                <div class="m-auto d-flex">
-                                    <a href="#" class="add-to-cart d-flex justify-content-center align-items-center text-center">
-                                        <span><i class="ion-ios-menu"></i></span>
-                                    </a>
-                                    <a href="#" class="buy-now d-flex justify-content-center align-items-center mx-1">
-                                        <span><i class="ion-ios-cart"></i></span>
-                                    </a>
-                                    <a href="#" class="heart d-flex justify-content-center align-items-center ">
-                                        <span><i class="ion-ios-heart"></i></span>
-                                    </a>
-                                </div>
-                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -175,23 +121,11 @@
                         <div class="text py-3 pb-4 px-3 text-center">
                             <h3><a href="#">Green Beans</a></h3>
                             <div class="d-flex">
-                                <div class="pricing">
+                                <div class="text text-center">
                                     <p class="price"><span>$120.00</span></p>
                                 </div>
                             </div>
-                            <div class="bottom-area d-flex px-3">
-                                <div class="m-auto d-flex">
-                                    <a href="#" class="add-to-cart d-flex justify-content-center align-items-center text-center">
-                                        <span><i class="ion-ios-menu"></i></span>
-                                    </a>
-                                    <a href="#" class="buy-now d-flex justify-content-center align-items-center mx-1">
-                                        <span><i class="ion-ios-cart"></i></span>
-                                    </a>
-                                    <a href="#" class="heart d-flex justify-content-center align-items-center ">
-                                        <span><i class="ion-ios-heart"></i></span>
-                                    </a>
-                                </div>
-                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -203,23 +137,11 @@
                         <div class="text py-3 pb-4 px-3 text-center">
                             <h3><a href="#">Purple Cabbage</a></h3>
                             <div class="d-flex">
-                                <div class="pricing">
+                                <div class="text text-center">
                                     <p class="price"><span>$120.00</span></p>
                                 </div>
                             </div>
-                            <div class="bottom-area d-flex px-3">
-                                <div class="m-auto d-flex">
-                                    <a href="#" class="add-to-cart d-flex justify-content-center align-items-center text-center">
-                                        <span><i class="ion-ios-menu"></i></span>
-                                    </a>
-                                    <a href="#" class="buy-now d-flex justify-content-center align-items-center mx-1">
-                                        <span><i class="ion-ios-cart"></i></span>
-                                    </a>
-                                    <a href="#" class="heart d-flex justify-content-center align-items-center ">
-                                        <span><i class="ion-ios-heart"></i></span>
-                                    </a>
-                                </div>
-                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -241,8 +163,8 @@
             </div>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <form action="<?= base_url(); ?>produk/beli">
-                    <button class="btn btn-success ml-5" style="width:200px">Beli</button>
+                <form action="<?= base_url(); ?>produk/keranjang">
+                    <button class="btn btn-success ml-5" style="width:200px">Masuk Ke keranjang</button>
                 </form>
             </div>
     </div>

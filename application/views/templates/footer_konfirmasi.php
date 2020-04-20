@@ -29,7 +29,25 @@
             <div class="modal-body">Masuk Sebagai ?</div>
             <div class="modal-footer">
                 <a class="btn btn-secondary" href="<?= base_url('login'); ?>">Admin</a>
-                <a class="btn  btn-primary" href="<?= base_url('login'); ?>">Pengguna</a>
+                <a class="btn  btn-success" href="<?= base_url('login'); ?>">Pengguna</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Konfirmasi Modal-->
+<div class="modal fade" id="konfirModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Form Konfirmasi</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">Setelah menyelesaikan transaksi anda bisa melihat Progress pengiriman barang</div>
+            <div class="modal-footer">
+                <a class="btn  btn-success" href="<?= base_url(); ?>produk/status_pesanan">Selanjutnya</a>
             </div>
         </div>
     </div>

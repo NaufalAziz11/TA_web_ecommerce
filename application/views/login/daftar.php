@@ -18,6 +18,9 @@
 								</div>
 								<form class="user" method="post" action="<?= base_url(); ?>login/daftar">
 									<div class="form-group">
+										<input type="hidden" class="form-control form-control-user" id="id_user" name="id_user" value="<?= set_value('id_user'); ?>">
+									</div>
+									<div class="form-group">
 										<input type="text" class="form-control form-control-user" id="nama" name="nama" placeholder="Masukkan Nama..." value="<?= set_value('nama'); ?>">
 										<?= form_error('nama', '<small class="text-danger pl-3">', '</small>'); ?>
 									</div>
