@@ -47,7 +47,7 @@
             </div>
             <div class="modal-body">Setelah menyelesaikan transaksi anda bisa melihat Progress pengiriman barang</div>
             <div class="modal-footer">
-                <a class="btn  btn-success" href="<?= base_url(); ?>produk/status_pesanan">Selanjutnya</a>
+                <a class="btn  btn-success" href="<?= base_url(); ?>produk/update_bukti">Selanjutnya</a>
             </div>
         </div>
     </div>
@@ -100,3 +100,43 @@
 </body>
 
 </html>
+
+<script>
+    $(document).ready(function() {
+        var o = document.getElementById('ongkir').value;
+        var t = document.getElementById('total').value;
+
+        total_semua = parseInt(o) + parseInt(t);
+        document.getElementById('total_semua').innerHTML = "<b>Total Biaya &emsp;&nbsp;&nbsp; :&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Rp." + number_format(total_semua, 0, ',', '.') + "</b>"
+
+    })
+</script>
+
+<script>
+    var status = document.getElementById('status').value;
+
+    $(document).ready(function() {
+        if (status == "Sudah dibayar") {
+            $("#btn_submit2").show();
+            $("#btn_submit").hide();
+        } else {
+            $("#btn_submit2").hide();
+            $("#btn_submit").show();
+        }
+
+    });
+</script>
+
+<script>
+    var statuss = document.getElementById('status_pengiriman').value;
+
+    $(document).ready(function() {
+        if (statuss == "Belum dikonfirmasi") {
+            $("#taii").hide();
+        } else {
+            $("#taii").hide();
+
+        }
+
+    });
+</script>

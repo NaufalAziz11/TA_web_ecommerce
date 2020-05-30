@@ -24,17 +24,22 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>10004321</td>
-                            <td>Naufal</td>
-                            <td>Ds.kalisari</td>
-                            <td>02/03/2020, jam 11.00</td>
-                            <td>03/03/2020, jam 11.00</td>
-                            <td>Belum dibayar</td>
-                            <td>
-                                <a class="btn btn-success btn-sm" href="<?= base_url() ?>produk/detail_pesan">Detail</a>
+                            <?php
+
+                            foreach ($invoice as $inv) : ?>
+                        <tr>
+                            <td><?= $inv->id_invoice ?></td>
+                            <td><?= $inv->nama_penerima ?>
+                            <td><?= $inv->alamat_lengkap ?></td>
+                            <td><?= $inv->tgl_pesan ?></td>
+                            <td><?= $inv->batas_bayar ?></td>
+                            <td><?= $inv->status_pembayaran ?></td>
+                            <td><?= anchor('produk/detail_pesan/' . $inv->id_invoice, '<div class="btn btn-success btn-sm">Detail</div>') ?>
+
                             </td>
 
                         </tr>
+                    <?php endforeach ?>
 
 
                     </tbody>

@@ -26,8 +26,8 @@ class Login extends CI_Controller
     {
         $email = $this->input->post('email');
         $password = $this->input->post('password');
-        $user = $this->User_model->getuserById($email);
-        // $user['tb_user'] = $this->db->Login_model->getUserById($email);
+        $user = $this->User_model->tampiluserByEmail($email);
+        // $user['tb_user'] = $this->db->Login_model->tampiluserByEmail($email);
         // $data['mahasiswa'] = $this->Mahasiswa_model->getMahasiswaById($id);
 
         //jika user ada
@@ -44,7 +44,7 @@ class Login extends CI_Controller
                     if ($user['level_id'] == 1) {
                         redirect('admin');
                     } else if ($user['level_id'] == 3) {
-                        redirect('admin');
+                        redirect('pengelola');
                     } else {
                         redirect('user');
                     }
@@ -170,7 +170,7 @@ class Login extends CI_Controller
         $email = $this->input->get('email');
         $token = $this->input->get('token');
 
-        $user = $this->User_model->getuserById($email);
+        $user = $this->User_model->tampiluserByEmail($email);
 
 
         if ($user) {
@@ -213,6 +213,7 @@ class Login extends CI_Controller
     }
     public function logout()
     {
+        // $this->cart->destroy();
         $this->session->unset_userdata('email');
         $this->session->unset_userdata('level_id');
 
@@ -274,7 +275,7 @@ class Login extends CI_Controller
         $email = $this->input->get('email');
         $token = $this->input->get('token');
 
-        $user = $this->User_model->getuserById($email);
+        $user = $this->User_model->tampiluserByEmail($email);
 
         if ($user) {
             $user_token = $this->db->get_where('user_token', ['token' => $token])
@@ -297,7 +298,7 @@ class Login extends CI_Controller
 
     public function change_password()
     {
-        if(!$this->session->userdata('reset_email')){
+        if (!$this->session->userdata('reset_email')) {
             redirect('login');
         }
 
@@ -309,24 +310,24 @@ class Login extends CI_Controller
         $this->form_validation->set_rules('password3', 'Password', 'required|trim|matches[password2]');
         if ($this->form_validation->run() == false) {
 
-        $data['judul'] = 'Ganti Password';
+            $data['judul'] = 'Ganti Password';
 
-        $this->load->view('templates/headerlogin', $data);
-        $this->load->view('login/lupa_password', $data);
-        $this->load->view('templates/footerlogin', $data);
-    }else{
-        $password =  password_hash($this->input->post('password2'), PASSWORD_DEFAULT);
-        $email = $this->session->userdata('reset_email');
+            $this->load->view('templates/headerlogin', $data);
+            $this->load->view('login/lupa_password', $data);
+            $this->load->view('templates/footerlogin', $data);
+        } else {
+            $password =  password_hash($this->input->post('password2'), PASSWORD_DEFAULT);
+            $email = $this->session->userdata('reset_email');
 
-        $this->db->set('password',$password);
-        $this->db->where('email',$email);
-        $this->db->update('tb_user');
+            $this->db->set('password', $password);
+            $this->db->where('email', $email);
+            $this->db->update('tb_user');
 
-        $this->session->unset_userdata('reset_email');
+            $this->session->unset_userdata('reset_email');
 
-        $this->session->set_flashdata('message', '<div class="alert alert-success"
+            $this->session->set_flashdata('message', '<div class="alert alert-success"
         role=alert">Password berhasil direset</div>');
-        redirect('login');
+            redirect('login');
+        }
     }
-}
 }

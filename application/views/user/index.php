@@ -292,11 +292,11 @@
 			<?php foreach ($barang as $brg) : ?>
 				<div class="col-md-6 col-lg-3 ftco-animate">
 					<div class="product">
-						<a href="#" class="img-prod text-center"><img class="img-fluid" style="width:250px; height:200px" src="<?= base_url() . 'assets/images/produk/' . $brg->gambar ?>" alt="Colorlib Template">
+						<a href="<?= base_url() ?>produk/index/<?= $brg->id_barang ?>" class="img-prod text-center"><img class="img-fluid" style="width:250px; height:200px" src="<?= base_url() . 'assets/images/produk/' . $brg->gambar ?>" alt="Colorlib Template">
 							<div class="overlay"></div>
 						</a>
 						<div class="text py-3 pb-4 px-3 text-center">
-							<h3><a href="#"><?= $brg->nama_barang ?></a></h3>
+							<h3><a href="<?= base_url() ?>produk/index/<?= $brg->id_barang ?>"><?= $brg->nama_barang ?></a></h3>
 							<div class="d-flex">
 								<div class="text text-center">
 									<p class="price"><span class="mr-2 price">Rp.<?= $brg->harga ?></span>

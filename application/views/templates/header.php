@@ -44,6 +44,9 @@
 	<link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/lib/bootstrap-fileupload/bootstrap-fileupload.css" />
 	<title><?= $judul; ?></title>
 
+	<link rel="stylesheet" href="jquery.nice-number.css">
+
+
 </head>
 <!-- Logout Modal-->
 <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -104,13 +107,17 @@
 
 
 					<?php if ($this->session->userdata('email')) { ?>
-						<a href="<?= base_url(); ?>produk/keranjang" class="mt-2 ml-2"><span class="icon-shopping_cart"></span>[3]</a>
-						<a href="<?= base_url(); ?>produk/invoice" class="mt-2 ml-1"><img src="<?= base_url(); ?>assets/images/icons/icons8-bell-30.png">[1]</a>
 
+
+						<div class="mt-2 ml-2"><?php $keranjang = '<span class="icon-shopping_cart"> [' . $this->cart->total_items() . ']'
+													?>
+							<?= anchor('produk/detail_keranjang', $keranjang) ?>
+							<a href="<?= base_url(); ?>produk/invoice" class="mt-2 ml-1"><img src="<?= base_url(); ?>assets/images/icons/icons8-bell-30.png">[<?php echo $this->db->where(['email' => $user_login['email']])->from("tb_invoice")->count_all_results(); ?>]</a>
+						</div>
 						<div class="nav-item dropdown no-arrow ">
 							<a class="nav-link dropdown-toggle mb-2" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								<span class="mr-2 d-none d-lg-inline text-gray-600 small"><?= $user['nama']; ?></span>
-								<img class="img-profile rounded-circle mr-2" style="max-height: 30px" src="<?= base_url('assets/images/profile/') . $user['image']; ?>">
+								<span class="mr-2 d-none d-lg-inline text-gray-600 small"><?= $user_login['nama']; ?></span>
+								<img class="img-profile rounded-circle mr-2" style="max-height: 30px" src="<?= base_url('assets/images/profile/') . $user_login['image']; ?>">
 
 							</a>
 							<!-- Dropdown - User Information -->

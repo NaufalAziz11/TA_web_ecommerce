@@ -18,22 +18,23 @@
                             <p>Nomor Telepon</p>
                         </div>
                         <br>
+                        <br>
                         <div>
-                            <p>Provinsi</p>
+                            <label for="">Provinsi</label>
                         </div>
                         <br>
                         <div>
-                            <p>Kota/Kabupaten</p>
+                            <label for="">Kota</label>
                         </div>
                         <br>
-                        <div>
+                        <!-- <div>
                             <p>Kecamatan</p>
                         </div>
                         <br>
                         <div>
                             <p>Kode Pos</p>
                         </div>
-                        <br>
+                        <br> -->
                         <div>
                             <p>Alamat Lengkap</p>
                         </div>
@@ -47,52 +48,17 @@
                             <div class="form-group">
                                 <input type="text" class="form-control text-center" style="width:100" id="exampleInputEmail1" aria-describedby="emailHelp">
                             </div>
-
-                            <div class="dropdown">
-                                <button class="btn btn-success btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Jawa Tengah
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#">Jawa Barat</a>
-                                    <a class="dropdown-item" href="#">Jawa Timur</a>
-                                </div>
+                            <div class="form-group">
+                                <select id="provinsi" onchange="get_kota()" class="form-control provinsi" name="provinsi"></select>
                             </div>
-                            <br>
-                            <div class="dropdown">
-                                <button class="btn btn-success btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Kab.Pekalongan
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#">Kab.Batang</a>
-                                    <a class="dropdown-item" href="#">Kab.Pemalang</a>
-                                </div>
+                            <div class="form-group">
+                                <select id="kota" class="form-control kota" name="kota"></select>
                             </div>
-                            <br>
-                            <div class="dropdown mt-2">
-                                <button class="btn btn-success btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Kec.Kajen
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#">Kec.Doro</a>
-                                    <a class="dropdown-item" href="#">Kec.Talun</a>
-                                </div>
-                            </div>
-                            <br>
-                            <div class="dropdown mt-2">
-                                <button class="btn btn-success btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    51161
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#">51151</a>
-                                    <a class="dropdown-item" href="#">51162</a>
-                                </div>
-                            </div>
-                            <br>
-                            <br>
                             <div class="form-group">
                                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                             </div>
                             <br>
+
                             <button type="submit" class="btn btn-success btn-lg btn-block">Simpan</button>
                         </form>
                     </div>

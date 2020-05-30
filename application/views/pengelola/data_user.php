@@ -3,6 +3,7 @@
 
     <!-- Page Heading -->
     <h1 class="h3 mb-2 text-gray-800">Data User(karyawan)</h1>
+    <?= $this->session->flashdata('message'); ?>
     <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#tambahuserModal"><i class="fas fa-plus fa-sm">Tambah User</i></button>
     <br><br>
     <!-- DataTales Example -->
@@ -16,9 +17,9 @@
                         <tr>
                             <th>NO</th>
                             <th>Email</th>
-                            <th>Password</th>
+                            <th>Level user</th>
                             <th>Aksi</th>
-                            <th></th>
+
                         </tr>
                     </thead>
                     <tbody>
@@ -29,13 +30,10 @@
                             <tr>
                                 <td><?= $no++ ?></td>
                                 <td><?= $user->email ?>
-                                <td><?= $user->password  ?></td>
+                                <td><?= $user->level_id  ?></td>
 
                                 <td>
-                                    <div class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></div>
-                                </td>
-                                <td>
-                                    <div class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></div>
+                                    <a href="<?= base_url() ?>Pengelola/delete_user/<?= $user->email ?>" class="btn btn-danger btn-sm" onclick="return confirm('Apakah anda yakin menghapus data <?= $user->nama; ?> ')"><i class="fa fa-trash"></i></a>
                                 </td>
                             </tr>
                         <?php endforeach ?>

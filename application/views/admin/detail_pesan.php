@@ -13,36 +13,31 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
-                            <th>Id barang</th>
+                            <th>No</th>
                             <th>Nama barang</th>
                             <th>Qty</th>
-                            <th>Harga</th>
+                            <th>Harga satuan</th>
                             <th>Sub total</th>
 
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Paprika ijo</td>
-                            <td>1</td>
-                            <td>Rp.100.000</td>
-                            <td>Rp.100.000</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Paprika Kuning</td>
-                            <td>1</td>
-                            <td>Rp.100.000</td>
-                            <td>Rp.100.000</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Paprika Merah</td>
-                            <td>1</td>
-                            <td>Rp.100.000</td>
-                            <td>Rp.100.000</td>
-                        </tr>
+                        <?php
+                        $no = 1;
+                        $total = 0;
+                        foreach ($pesanan as $psn) :
+                            $subtotal = $psn->jumlah * $psn->harga;
+                            $total += $subtotal;
+                            ?>
+
+                            <tr>
+                                <td><?= $no++ ?></td>
+                                <td><?= $psn->nama_barang ?></td>
+                                <td><?= $psn->jumlah ?></td>
+                                <td><?= number_format($psn->harga, 0, ',', '.') ?></td>
+                                <td><?= number_format($subtotal, 0, ',', '.') ?></td>
+                            </tr>
+                        <?php endforeach; ?>
 
 
                     </tbody>

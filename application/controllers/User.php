@@ -10,10 +10,10 @@ class User extends CI_Controller
 
     public function index()
     {
-        $data['user'] = $this->db->get_where('tb_user', ['email' =>
-        $this->session->userdata('email')])->row_array();
+        $email =  $this->session->userdata('email');
+        $data['user_login'] = $this->User_model->tampiluserByEmail($email);
 
-        $data['barang'] = $this->Produk_model->tampil_barang()->result();
+        $data['barang'] = $this->Produk_model->tampil_barang();
         $data['kategori'] = $this->Produk_model->tampil_kategori()->result();
         $data['judul'] = 'Halaman User';
 
@@ -23,8 +23,12 @@ class User extends CI_Controller
     }
     public function profile()
     {
-        $data['user'] = $this->db->get_where('tb_detail_user', ['email' =>
-        $this->session->userdata('email')])->row_array();
+        $email =  $this->session->userdata('email');
+        $data['user_login'] = $this->User_model->tampiluserByEmail($email);
+
+        $email =  $this->session->userdata('email');
+        $data['user_login'] = $this->User_model->tampildetailuserByEmail($email);
+
         $data['judul'] = 'Halaman Profile User';
 
         $this->form_validation->set_rules('email', 'Email', 'trim|required');
@@ -71,8 +75,8 @@ class User extends CI_Controller
     }
     public function ganti_pass()
     {
-        $data['user'] = $this->db->get_where('tb_user', ['email' =>
-        $this->session->userdata('email')])->row_array();
+        $email =  $this->session->userdata('email');
+        $data['user_login'] = $this->User_model->tampiluserByEmail($email);
 
         $data['judul'] = 'Halaman Ganti Password User';
         $this->form_validation->set_rules('password1', 'Password', 'required|trim');
@@ -117,21 +121,11 @@ class User extends CI_Controller
             }
         }
     }
-    public function alamat()
-    {
-        $data['user'] = $this->db->get_where('tb_user', ['email' =>
-        $this->session->userdata('email')])->row_array();
 
-        $data['judul'] = 'Halaman Profile User';
-
-        $this->load->view('templates/header', $data);
-        $this->load->view('user/alamat', $data);
-        $this->load->view('templates/footer');
-    }
     public function kategori()
     {
-        $data['user'] = $this->db->get_where('tb_user', ['email' =>
-        $this->session->userdata('email')])->row_array();
+        $email =  $this->session->userdata('email');
+        $data['user_login'] = $this->User_model->tampiluserByEmail($email);
 
 
         $data['judul'] = 'Halaman Kategori Peralatan';

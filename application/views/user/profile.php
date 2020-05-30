@@ -39,29 +39,29 @@
                                 <div class="col-md-12 text-center">
                                     <div class="fileupload fileupload-new" data-provides="fileupload">
                                         <div class="fileupload-new thumbnail" style="width: 200px; height: 150px;">
-                                            <img src="<?= base_url('assets/images/profile/') . $user['image'] ?>" alt="" />
+                                            <img src="<?= base_url('assets/images/profile/') . $user_login['image'] ?>">
                                         </div>
                                         <div class="fileupload-preview fileupload-exists thumbnail" style="max-width: 200px; max-height: 150px; line-height: 20px;"></div>
                                         <div>
                                             <span class="btn btn-theme02 btn-file">
-                                                <span class="fileupload-new" value="<?= $user['image']; ?>"><i class="fa fa-paperclip"></i> Select image</span>
+                                                <span class="fileupload-new" value="<?= $user_login['image']; ?>"><i class="fa fa-paperclip"></i> Select image</span>
                                                 <span class="fileupload-exists"><i class="fa fa-undo"></i> Change</span>
-                                                <input type="file" class="default" name="image" value="<?= $user['image']; ?>" required />
+                                                <input type="file" class="default" name="image" value="<?= $user_login['image']; ?>" required />
                                             </span>
                                             <a href="advanced_form_components.html#" class="btn btn-theme04 fileupload-exists" data-dismiss="fileupload"><i class="fa fa-trash-o"></i> Remove</a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control text-center bg-light" value="<?= $user['nama']; ?>" style="width:100" id="nama" name="nama" aria-describedby="emailHelp" readonly>
+                                    <input type="text" class="form-control text-center bg-light" value="<?= $user_login['nama']; ?>" style="width:100" id="nama" name="nama" aria-describedby="emailHelp" readonly>
                                     <?= form_error('nama', '<small class="text-danger pl-3">', '</small>'); ?>
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" class="form-control text-center bg-light" value="<?= $user['email']; ?>" id="email" name="email" aria-describedby="emailHelp" readonly>
+                                    <input type="email" class="form-control text-center bg-light" value="<?= $user_login['email']; ?>" id="email" name="email" aria-describedby="emailHelp" readonly>
                                 </div>
                                 <div class="form-group">
                                     <select class="btn btn-success btn-sm dropdown-toggle" id="jenis_kelamin" name="jenis_kelamin" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <option value="<?= $user['jenis_kelamin']; ?>"><?= $user['jenis_kelamin']; ?></option>
+                                        <option value="<?= $user_login['jenis_kelamin']; ?>"><?= $user_login['jenis_kelamin']; ?></option>
                                         <option value="Laki-laki">Laki-laki</option>
                                         <option value="Perempuan">Perempuan</option>
                                     </select>
@@ -69,16 +69,14 @@
                                 <br>
                                 <div class="form-group">
                                     <div class="form-line">
-                                        <input type="date" class="form-control" id="tanggal" name="tanggal" value="<?= $user['tanggal']; ?>">
+                                        <input type="date" class="form-control" id="tanggal" name="tanggal" value="<?= $user_login['tanggal']; ?>">
                                     </div>
                                 </div>
 
                                 <div class="form-group">
-                                    <input type="text" class="form-control text-center" name="no_telepon" id="no_telepon" value="<?= $user['no_telepon']; ?>">
+                                    <input type="text" class="form-control text-center" name="no_telepon" id="no_telepon" value="<?= $user_login['no_telepon']; ?>">
                                 </div>
-                                <div class="form-group">
-                                    <a href="<?= base_url() ?>user/alamat">Atur Alamat</a>
-                                </div>
+
                                 <div class="form-group">
                                     <a href="<?= base_url() ?>user/ganti_pass">Ganti Password</a>
                                 </div>
